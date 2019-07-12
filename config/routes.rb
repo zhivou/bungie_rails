@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  namespace :api do
+    get 'items-all', to: 'destiny_inventory_item_definition#destiny_inventory_all'
+    get 'item/:item_id', to: 'destiny_inventory_item_definition#destiny_inventory_item'
+  end
 end
