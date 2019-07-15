@@ -18,12 +18,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: db/world_sql_content_ba92e715ad63581b96a3f32f0211f8b6.sqlite3
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database:
-  username:
-  password:
+  <<: *default
+  database: db/world_sql_content_ba92e715ad63581b96a3f32f0211f8b6.sqlite3
